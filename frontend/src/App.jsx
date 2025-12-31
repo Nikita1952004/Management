@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
+import { Analytics } from '@vercel/analytics/react'
 import { useAuth } from './context/AuthContext'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
@@ -22,6 +23,7 @@ function App() {
   return (
     <Router>
       <Toaster position="top-right" />
+      <Analytics />
       <Routes>
         <Route 
           path="/login" 
